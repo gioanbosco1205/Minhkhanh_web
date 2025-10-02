@@ -95,7 +95,7 @@ const Navbar = () => {
         </div>
         {!isDashboardPage && (
           <p className="text-primary-200 hidden md:block">
-            Khám phá ngôi nhà mơ ước của bạn với chúng tôi 
+            Khám phá phòng trọ cho thuê lý tưởng cho sinh viên
           </p>
         )}
         <div className="flex items-center gap-5">
@@ -146,13 +146,13 @@ const Navbar = () => {
                       )
                     }
                   >
-                    Settings
+                    Cài Đặt
                   </DropdownMenuItem>
                   <DropdownMenuItem
                     className="cursor-pointer hover:!bg-primary-700 hover:!text-primary-100"
                     onClick={handleSignOut}
                   >
-                    Sign out
+                    Đăng Xuất
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -164,7 +164,7 @@ const Navbar = () => {
                   variant="outline"
                   className="text-white border-white bg-transparent hover:bg-white hover:text-primary-700 rounded-lg"
                 >
-                  Sign In
+                  Đăng Nhập
                 </Button>
               </Link>
               <Link href="/signup">
@@ -172,7 +172,7 @@ const Navbar = () => {
                   variant="secondary"
                   className="text-white bg-secondary-600 hover:bg-white hover:text-primary-700 rounded-lg"
                 >
-                  Sign Up
+                  Đăng Ký
                 </Button>
               </Link>
             </>
