@@ -86,7 +86,7 @@ const Navbar = () => {
                 <>
                   <Search className="h-4 w-4" />
                   <span className="hidden md:block ml-2">
-                    Search Properties
+                    Tìm Kiếm Phòng Trọ
                   </span>
                 </>
               )}
