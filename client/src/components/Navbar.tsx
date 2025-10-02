@@ -58,9 +58,9 @@ const Navbar = () => {
                 className="w-6 h-6"
               />
               <div className="text-xl font-bold">
-                MINH
+                Minh
                 <span className="text-secondary-500 font-light hover:!text-primary-300">
-                  KHANH
+                  Khanh
                 </span>
               </div>
             </div>
@@ -95,7 +95,7 @@ const Navbar = () => {
         </div>
         {!isDashboardPage && (
           <p className="text-primary-200 hidden md:block">
-            Khám phá phòng cho thuê lý tưởng cho sinh viên 
+            Khám phá ngôi nhà mơ ước của bạn với chúng tôi 
           </p>
         )}
         <div className="flex items-center gap-5">
@@ -164,7 +164,7 @@ const Navbar = () => {
                   variant="outline"
                   className="text-white border-white bg-transparent hover:bg-white hover:text-primary-700 rounded-lg"
                 >
-                  Đăng nhập
+                  Sign In
                 </Button>
               </Link>
               <Link href="/signup">
@@ -172,7 +172,7 @@ const Navbar = () => {
                   variant="secondary"
                   className="text-white bg-secondary-600 hover:bg-white hover:text-primary-700 rounded-lg"
                 >
-                  Đăng ký
+                  Sign Up
                 </Button>
               </Link>
             </>
