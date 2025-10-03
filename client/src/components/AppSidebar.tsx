@@ -35,17 +35,17 @@ const AppSidebar = ({ userType }: AppSidebarProps) => {
             label: "Applications",
             href: "/managers/applications",
           },
-          { icon: Settings, label: "Settings", href: "/managers/settings" },
+          { icon: Settings, label: "Cài Đặt", href: "/managers/settings" },
         ]
       : [
-          { icon: Heart, label: "Favorites", href: "/tenants/favorites" },
+          { icon: Heart, label: "Yêu Thích", href: "/tenants/favorites" },
           {
             icon: FileText,
-            label: "Applications",
+            label: "Ứng Dụng",
             href: "/tenants/applications",
           },
-          { icon: Home, label: "Residences", href: "/tenants/residences" },
-          { icon: Settings, label: "Settings", href: "/tenants/settings" },
+          { icon: Home, label: "Phòng Cao Cấp ", href: "/tenants/residences" },
+          { icon: Settings, label: "Cài Đặt", href: "/tenants/settings" },
         ];
 
   return (
