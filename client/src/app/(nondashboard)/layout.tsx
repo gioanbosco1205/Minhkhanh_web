@@ -23,6 +23,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       } else {
         setIsLoading(false);
       }
+    } else {
+      setIsLoading(false); 
     }
   }, [authUser, router, pathname]);
 

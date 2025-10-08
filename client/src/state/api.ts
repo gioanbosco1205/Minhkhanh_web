@@ -42,14 +42,15 @@ export const api = createApi({
           const user = await getCurrentUser();
           const userRole = idToken?.payload["custom:role"] as string;
 
-          const endpoint =
+
+          const endpoint = // goi api lay thong tin chi tiet 
             userRole === "manager"
               ? `/managers/${user.userId}`
               : `/tenants/${user.userId}`;
 
           let userDetailsResponse = await fetchWithBQ(endpoint);
 
-          // if user doesn't exist, create new user
+          // neu nhu user khong ton tai tao cai moi 
           if (
             userDetailsResponse.error &&
             userDetailsResponse.error.status === 404

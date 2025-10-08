@@ -20,7 +20,7 @@ interface InitialStateTypes {
 
 export const initialState: InitialStateTypes = {
   filters: {
-    location: "Los Angeles",
+    location: "Thủ Dầu Một",
     beds: "any",
     baths: "any",
     propertyType: "any",

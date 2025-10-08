@@ -64,9 +64,7 @@ const FiltersBar = () => {
     };
 
     return <div className="flex justyfy-between items-center w-full py-5">
-        {/* Filters */}
         <div className="flex justify-between items-center gap-4 p-2">
-            {/* All Filters */}
             <Button
                 variant="outline"
                 className={cn(
@@ -79,7 +77,6 @@ const FiltersBar = () => {
                 <span> Tất cả bộ lọc </span>
             </Button>
 
-            {/* Search Location */}
             <div className="flex items-center">
                 <Input
                     placeholder="Tìm kiếm địa điểm"
@@ -88,7 +85,6 @@ const FiltersBar = () => {
                     className="w-40 rounded-l-xl rounded-r-none border-primary-400 border-r-0"
                 />
                 <Button
-                    // OnClick = {handleLocationSearch}
                     className={`rounder-r-xl rounded-l-none border-l-none border-primary-400 shadow-none 
                     border hover:bg-primary-700 hover:text-primary-50`}
                 >
@@ -146,68 +142,9 @@ const FiltersBar = () => {
                         ))}
                     </SelectContent>
                 </Select>
-            </div>
-
-            {/* Beds and Baths */}
-        <div className="flex gap-1">
-          {/* Beds */}
-          <Select
-            value={filters.beds}
-            onValueChange={(value) => handleFilterChange("beds", value, null)}
-          >
-            <SelectTrigger className="w-26 rounded-xl border-primary-400">
-              <SelectValue placeholder="Beds" />
-            </SelectTrigger>
-            <SelectContent className="bg-white">
-              <SelectItem value="any">Any Beds</SelectItem>
-              <SelectItem value="1">1+ bed</SelectItem>
-              <SelectItem value="2">2+ beds</SelectItem>
-              <SelectItem value="3">3+ beds</SelectItem>
-              <SelectItem value="4">4+ beds</SelectItem>
-            </SelectContent>
-          </Select>
-
-          {/* Baths */}
-          <Select
-            value={filters.baths}
-            onValueChange={(value) => handleFilterChange("baths", value, null)}
-          >
-            <SelectTrigger className="w-26 rounded-xl border-primary-400">
-              <SelectValue placeholder="Baths" />
-            </SelectTrigger>
-            <SelectContent className="bg-white">
-              <SelectItem value="any">Any Baths</SelectItem>
-              <SelectItem value="1">1+ bath</SelectItem>
-              <SelectItem value="2">2+ baths</SelectItem>
-              <SelectItem value="3">3+ baths</SelectItem>
-            </SelectContent>
-          </Select>
+            </div>  
         </div>
-
-        {/* Property Type */}
-        <Select
-          value={filters.propertyType || "any"}
-          onValueChange={(value) =>
-            handleFilterChange("propertyType", value, null)
-          }
-        >
-          <SelectTrigger className="w-32 rounded-xl border-primary-400">
-            <SelectValue placeholder="Home Type" />
-          </SelectTrigger>
-          <SelectContent className="bg-white">
-            <SelectItem value="any">Any Property Type</SelectItem>
-            {Object.entries(PropertyTypeIcons).map(([type, Icon]) => (
-              <SelectItem key={type} value={type}>
-                <div className="flex items-center">
-                  <Icon className="w-4 h-4 mr-2" />
-                  <span>{type}</span>
-                </div>
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        </div>
-    </div>;
+    </div>
 };
 
 export default FiltersBar;
