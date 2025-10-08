@@ -36,7 +36,7 @@ const SettingsForm = ({
           {`${userType.charAt(0).toUpperCase() + userType.slice(1)} Settings`}
         </h1>
         <p className="text-sm text-gray-500 mt-1">
-          Manage your account preferences and personal information
+          Quản lý các tùy chọn tài khoản và thông tin cá nhân của bạn.        
         </p>
       </div>
       <div className="bg-white rounded-xl p-6">
@@ -64,14 +64,14 @@ const SettingsForm = ({
                 onClick={toggleEditMode}
                 className="bg-secondary-500 text-white hover:bg-secondary-600"
               >
-                {editMode ? "Cancel" : "Edit"}
+                {editMode ? "Thoát" : "Chỉnh sửa"}
               </Button>
               {editMode && (
                 <Button
                   type="submit"
                   className="bg-primary-700 text-white hover:bg-primary-800"
                 >
-                  Save Changes
+                  Lưu thay đổi 
                 </Button>
               )}
             </div>

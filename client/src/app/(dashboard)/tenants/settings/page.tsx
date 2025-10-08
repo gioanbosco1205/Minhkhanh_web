@@ -1,22 +1,26 @@
 "use client";
-import { useGetAuthUserQuery, useUpdateTenantSettingsMutation } from '@/state/api'
-import React from 'react'
-import SettingsForm from '@/components/SettingsForm'
+
+import SettingsForm from "@/components/SettingsForm";
+import {
+  useGetAuthUserQuery,
+  useUpdateTenantSettingsMutation,
+} from "@/state/api";
+import React from "react";
 
 const TenantSettings = () => {
-  const { data: authUser, isLoading } = useGetAuthUserQuery(); 
+  const { data: authUser, isLoading } = useGetAuthUserQuery();
+  console.log("authUser", authUser);
   const [updateTenant] = useUpdateTenantSettingsMutation();
 
   if (isLoading) return <>Loading...</>;
-  if (!authUser) return <>No user found</>;
 
-  // fallback sang cognitoInfo nếu userInfo không có
+
+  
   const initialData = {
-    name: authUser?.userInfo?.name || authUser?.cognitoInfo?.username || "",
-    email: authUser?.userInfo?.email || authUser?.cognitoInfo?.email || "",
-    phoneNumber: authUser?.userInfo?.phoneNumber || authUser?.cognitoInfo?.phone_number || "",
+    name: authUser?.userInfo.name,
+    email: authUser?.userInfo.email,
+    phoneNumber: authUser?.userInfo.phoneNumber,
   };
-
   const handleSubmit = async (data: typeof initialData) => {
     await updateTenant({
       cognitoId: authUser?.cognitoInfo?.userId,
@@ -31,6 +35,6 @@ const TenantSettings = () => {
       userType="tenant"
     />
   );
-}
+};
 
 export default TenantSettings;

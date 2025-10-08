@@ -165,7 +165,7 @@ const formFields = {
 };
 
 const Auth = ({ children }: { children: React.ReactNode }) => {
-  const { user } = useAuthenticator((context) => [context.user]);
+  const { user } = useAuthenticator((context) => [context.user]); /// lay trang thai nguoi dung 
   const router = useRouter();
   const pathname = usePathname();
 
@@ -173,14 +173,13 @@ const Auth = ({ children }: { children: React.ReactNode }) => {
   const isDashboardPage =
     pathname.startsWith("/manager") || pathname.startsWith("/tenants");
 
-  // Redirect authenticated users away from auth pages
-  useEffect(() => {
+
+    useEffect(() => {  /// dang nhap thanh cong 
     if (user && isAuthPage) {
-      router.push("/");
+      router.push("/landing");
     }
   }, [user, isAuthPage, router]);
 
-  // Allow access to public pages without authentication
   if (!isAuthPage && !isDashboardPage) {
     return <>{children}</>;
   }
