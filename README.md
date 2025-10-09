@@ -8,3 +8,6 @@ npm install @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons @f
 
 npm install express
 npm install -D @types/express
+
+// server 
+npm init -y

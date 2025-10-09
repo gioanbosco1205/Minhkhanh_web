@@ -1,16 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface FiltersState {
-  location: string;
-  beds: string;
-  baths: string;
-  propertyType: string;
-  amenities: string[];
-  availableFrom: string;
-  priceRange: [number, number] | [null, null];
-  squareFeet: [number, number] | [null, null];
-  coordinates: [number, number];
+  location?: string;
+  priceRange?: [number | null, number | null];
+  roomType?: string; // phòng trọ, căn hộ, ký túc xá,...
+  areaRange?: [number | null, number | null];
+  gender?: "male" | "female" | "any";
+  amenities?: string[];
+  availableFrom?: string;
+  coordinates?: [number, number];
+  favoriteIds?: number[];
 }
+
 
 interface InitialStateTypes {
   filters: FiltersState;
@@ -21,18 +22,18 @@ interface InitialStateTypes {
 export const initialState: InitialStateTypes = {
   filters: {
     location: "Thủ Dầu Một",
-    beds: "any",
-    baths: "any",
-    propertyType: "any",
+    priceRange: [null, null],
+    roomType: "any",
+    areaRange: [null, null],
+    gender: "any",
     amenities: [],
     availableFrom: "any",
-    priceRange: [null, null],
-    squareFeet: [null, null],
-    coordinates: [-118.25, 34.05],
+    coordinates: [106.65, 10.75], // VD: tọa độ mặc định Thủ Dầu Một
   },
   isFiltersFullOpen: false,
   viewMode: "grid",
 };
+
 
 export const globalSlice = createSlice({
   name: "global",
