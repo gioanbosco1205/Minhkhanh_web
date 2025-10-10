@@ -1,4 +1,7 @@
 # Minhkhanh_web
+// ket noi postgres
+npx prisma migrate dev --name init
+
 npm install @fortawesome/free-brands-svg-icons --save
 npm install
 
@@ -10,4 +13,5 @@ npm install express
 npm install -D @types/express
 
 // server 
+npm install rimraf --save-dev
 npm init -y
