@@ -24,6 +24,12 @@ import {
   LucideIcon,
 } from "lucide-react";
 
+import {
+  Bed,
+  Building2,
+  Users,
+} from "lucide-react";
+
 export enum AmenityEnum {
   WasherDryer = "WasherDryer",
   AirConditioning = "AirConditioning",
@@ -92,6 +98,7 @@ export const HighlightIcons: Record<HighlightEnum, LucideIcon> = {
   QuietNeighborhood: VolumeX,
 };
 
+
 export enum PropertyTypeEnum {
   Rooms = "Rooms",
   Tinyhouse = "Tinyhouse",
@@ -108,6 +115,25 @@ export const PropertyTypeIcons: Record<PropertyTypeEnum, LucideIcon> = {
   Villa: Castle,
   Townhouse: Home,
   Cottage: Trees,
+};
+// =========================
+// 🎯 New Room Type for Filter
+// =========================
+
+export enum RoomTypeEnum {
+  PHONG_TRO = "Phòng trọ",
+  CAN_HO = "Căn hộ mini",
+  NHA_NGUYEN_CAN = "Nhà nguyên căn",
+  CHUNG_CU = "Chung cư",
+  KY_TUC_XA = "Ký túc xá",
+}
+
+export const RoomTypeIcons: Record<RoomTypeEnum, LucideIcon> = {
+  [RoomTypeEnum.PHONG_TRO]: Bed,
+  [RoomTypeEnum.CAN_HO]: Building2,
+  [RoomTypeEnum.NHA_NGUYEN_CAN]: Home,
+  [RoomTypeEnum.CHUNG_CU]: Building,
+  [RoomTypeEnum.KY_TUC_XA]: Users,
 };
 
 // Add this constant at the end of the file

@@ -159,6 +159,8 @@ const FiltersBar = () => {
             <SelectItem value="any">Loại hình</SelectItem>
             <SelectItem value="phong_tro">Phòng trọ</SelectItem>
             <SelectItem value="can_ho">Căn hộ mini</SelectItem>
+            <SelectItem value="nha_nguyen_can">Nhà nguyên căn</SelectItem>
+            <SelectItem value="chung_cu">Chung cư</SelectItem>
             <SelectItem value="ky_tuc_xa">Ký túc xá</SelectItem>
           </SelectContent>
         </Select>
