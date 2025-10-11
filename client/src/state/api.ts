@@ -107,6 +107,7 @@ export const api = createApi({
       latitude: filters.coordinates?.[0],
       longitude: filters.coordinates?.[1],
     });
+    console.log("Params gửi đi:", params);
 
     return { url: "properties", params };
   },

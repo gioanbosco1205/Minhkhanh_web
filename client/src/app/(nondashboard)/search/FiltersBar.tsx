@@ -162,6 +162,7 @@ const FiltersBar = () => {
             <SelectItem value="nha_nguyen_can">Nhà nguyên căn</SelectItem>
             <SelectItem value="chung_cu">Chung cư</SelectItem>
             <SelectItem value="ky_tuc_xa">Ký túc xá</SelectItem>
+            <SelectItem value="sleepbox">Sleepbox</SelectItem>
           </SelectContent>
         </Select>
 

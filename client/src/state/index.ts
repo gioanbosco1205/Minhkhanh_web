@@ -10,6 +10,7 @@ export interface FiltersState {
   availableFrom?: string;
   coordinates?: [number, number];
   favoriteIds?: number[];
+
 }
 
 
