@@ -22,6 +22,7 @@ import {
   Castle,
   Trees,
   LucideIcon,
+  BedSingle,
 } from "lucide-react";
 
 import {
@@ -126,6 +127,7 @@ export enum RoomTypeEnum {
   NHA_NGUYEN_CAN = "Nhà nguyên căn",
   CHUNG_CU = "Chung cư",
   KY_TUC_XA = "Ký túc xá",
+  SLEEPBOX = "Sleepbox",
 }
 
 export const RoomTypeIcons: Record<RoomTypeEnum, LucideIcon> = {
@@ -134,6 +136,7 @@ export const RoomTypeIcons: Record<RoomTypeEnum, LucideIcon> = {
   [RoomTypeEnum.NHA_NGUYEN_CAN]: Home,
   [RoomTypeEnum.CHUNG_CU]: Building,
   [RoomTypeEnum.KY_TUC_XA]: Users,
+  [RoomTypeEnum.SLEEPBOX]: BedSingle,
 };
 
 // Add this constant at the end of the file
